@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "손성준 메모.md",
+                "file": "검색엔진/Opensearch.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "손성준 메모"
+              "title": "Opensearch"
             }
           }
         ]
@@ -166,11 +166,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "3a5cbb6cb731cdf4",
+  "active": "f6762c70ae3e2cfb",
   "lastOpenFiles": [
+    "검색엔진/손성준 메모.md",
+    "검색엔진/Opensearch.md",
     "무제 1",
-    "무제",
-    "손성준 메모.md",
+    "검색엔진",
     "환영합니다!.md"
   ]
 }
