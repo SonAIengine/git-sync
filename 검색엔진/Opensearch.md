@@ -1,5 +1,8 @@
 POST reindex
 {
 	source : {
-	}
+		index: ""
+	},
+		{
+		}
 }
