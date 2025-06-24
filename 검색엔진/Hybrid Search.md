@@ -34,4 +34,6 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 
 ### Hybrid search with search_after
 1. search_after 개념
-2.-
+	- 라이브 커서(cursor) 역할
+	- 이전 페이지에서 마지막으로 반환된 문서의 정렬 키 값을 다음 요청에 넘겨주면, 그 뒤부터 결과를 이어서 가져올 수 있음.
+	- 큰 from 오프셋을 사용하지 않아도 돼서 
