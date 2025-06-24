@@ -6,3 +6,6 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 1. 텍스트 임베딩 모델 준비
 2. 플러그인 활성화(knn_vector, text_embedding, flow_framework)
 
+
+### Paginating hybrid query results
+하이브리드 검색의 결과 페이지네이션
