@@ -21,5 +21,10 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 	- 단, pagination_depth 를 높일수록 각 샤드에서 더 많은 후보를 메모리에 올려 처리하므로 성능 저하(메모리, CPU 증가)가 발생할 수 있음.
 
 
-
+```json
+{
+  "name": "YJ Kim",
+  "email": "x2bee@plateer.com",
+  "skills": ["Java", "Kotlin", "SQL"]
+}
 
