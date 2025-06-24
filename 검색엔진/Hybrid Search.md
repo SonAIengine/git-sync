@@ -53,14 +53,8 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 - doc_price 기준 페이지네이션
     `"sort": [{ "doc_price": { "order": "desc" } }], "search_after": [200]`
     
-     `doc_price`가 200보다 작은 순서로 뒤쪽 결과 반환
+	`doc_price`가 200보다 작은 순서로 뒤쪽 결과 반환
     
-- **`_id` 기준 페이지네이션**
-    
-    json
-    
-    코드 복사
-    
+- _id 기준 페이지네이션
     `"sort": [{ "_id": { "order": "desc" } }], "search_after": ["7yaM4JABZkI1FQv8AwoN"]`
-    
-    → `_id`가 `"7yaM4JABZkI1FQv8AwoN"`보다 뒤에 오는 ID 문서 반환
+    `_id`가 `"7yaM4JABZkI1FQv8AwoN"`보다 뒤에 오는 ID 문서 반환
