@@ -58,3 +58,71 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 - _id 기준 페이지네이션
     `"sort": [{ "_id": { "order": "desc" } }], "search_after": ["7yaM4JABZkI1FQv8AwoN"]`
     `_id`가 `"7yaM4JABZkI1FQv8AwoN"`보다 뒤에 오는 ID 문서 반환
+
+
+
+```markdown
+### Hybrid search with `search_after`
+
+1. **`search_after` 개념**  
+   - 라이브 커서(cursor) 역할  
+   - 이전 페이지에서 마지막으로 반환된 문서의 **정렬 키 값**을 다음 요청에 넘겨주면, 그 뒤부터 결과를 이어서 가져올 수 있음  
+   - 큰 `from` 오프셋을 사용하지 않아도 되므로 성능 상 이점  
+
+2. **첫 번째 페이지 요청**  
+   ```http
+   GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
+   {
+     "query": { /* hybrid query */ },
+     "sort": [
+       { "doc_price": { "order": "desc" } }
+     ],
+     "size": 2
+   }
+```
+
+- 예시 결과의 `hits.sort` 값이 `[350]`, `[200]` 등으로 표시됨
+    
+
+3. **두 번째 페이지 요청**
+    
+    ```http
+    GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
+    {
+      "query": { /* 동일한 hybrid query */ },
+      "sort": [
+        { "doc_price": { "order": "desc" } }
+      ],
+      "search_after": [200],
+      "size": 2
+    }
+    ```
+    
+    - `doc_price`가 200 이하인 문서부터 **다음 2건**을 반환
+        
+
+---
+
+## 4. 예시 정리
+
+- **`doc_price` 기준 페이지네이션**
+    
+    ```json
+    "sort": [
+      { "doc_price": { "order": "desc" } }
+    ],
+    "search_after": [200]
+    ```
+    
+    → `doc_price`가 200보다 작은 순서로 뒤쪽 결과 반환
+    
+- **`_id` 기준 페이지네이션**
+    
+    ```json
+    "sort": [
+      { "_id": { "order": "desc" } }
+    ],
+    "search_after": ["7yaM4JABZkI1FQv8AwoN"]
+    ```
+    
+    → `_id`가 `"7yaM4JABZkI1FQv8AwoN"`보다 뒤에 오는 문서 반환
