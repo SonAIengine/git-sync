@@ -31,3 +31,7 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
   }
 }
 ```
+
+### Hybrid search with search_after
+1. search_after 개념
+2.-
