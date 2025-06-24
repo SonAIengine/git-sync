@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4d5b1a26724c7d82",
+        "id": "8cf579c2f67c11b0",
         "type": "tabs",
         "children": [
           {
-            "id": "91a98d2f871d49e4",
+            "id": "98feb4dd01d3bee2",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -163,8 +163,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 200,
-    "collapsed": true
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -177,10 +176,12 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "91a98d2f871d49e4",
+  "active": "4735b415ca90c474",
   "lastOpenFiles": [
-    "S2B_ISMP_3000_정보시스템구조및상세설계결과서(F).pdf",
+    "회의/교직원/S2B_ISMP_3000_정보시스템구조및상세설계결과서(F).pdf",
     "회의/교직원/0623 - 검색서비스구현가능성 검증.md",
+    "S2B_ISMP_3000_(2.3.1)To-BeS2B정보시스템구축방향(A3)(F) 1.pptx",
+    "S2B_ISMP_3000_(5.2.13.1)TO-BE애플리케이션구성도_전체(A3)(F) 1.pptx",
     "~$S2B_ISMP_3000_(2.3.1)To-BeS2B정보시스템구축방향(A3)(F).pptx",
     "S2B_ISMP_3000_(2.3.1)To-BeS2B정보시스템구축방향(A3)(F).pptx",
     "S2B_ISMP_3000_(5.2.13.1)TO-BE애플리케이션구성도_전체(A3)(F).pptx",
