@@ -11,10 +11,14 @@
             "id": "91a98d2f871d49e4",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": "검색엔진/Opensearch - ml - openai.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "새 탭"
+              "title": "Opensearch - ml - openai"
             }
           }
         ]
@@ -164,7 +168,7 @@
   },
   "active": "91a98d2f871d49e4",
   "lastOpenFiles": [
-    "검색엔진/Opensearch.md",
+    "검색엔진/Opensearch - ml - openai.md",
     "검색엔진/손성준 메모.md",
     "무제 1",
     "검색엔진",

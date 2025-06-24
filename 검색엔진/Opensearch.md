@@ -1,8 +1,0 @@
-POST reindex
-{
-	source : {
-		index: ""
-	},
-		{
-		}
-}
