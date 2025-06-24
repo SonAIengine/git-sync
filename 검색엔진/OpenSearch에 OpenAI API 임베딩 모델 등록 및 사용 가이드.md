@@ -39,7 +39,7 @@ POST /_plugins/_ml/connectors/_create
     "model": "text-embedding-3-small"
   },
   "credential": {
-    "openAI_key": "YOUR_OPENAI_API_KEY"
+    "openAI_key": ""
   },
   "actions": [
     {
