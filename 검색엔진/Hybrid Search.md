@@ -15,4 +15,7 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 2. from과 size 파라미터
 3. 페이지 간 일관성 유지
 	- pagination_depth 를 변경하면, 실제 후보(pool)의 범위가 달라져 최종 결과 순서가 바뀔 수 있음.
-	- 따라서 페이지를 넘길 때는 처음부터 끝까지 동일한 pagination_de
+	- 따라서 페이지를 넘길 때는 처음부터 끝까지 동일한 pagination_depth 값을 사용해야 일관된 페이징이 보장됩니다.
+4. 깊은 페이지네이션(deep pagination)
+	- 더 뒤쪽 페이지를 보고 싶다면 pagination_depth 를 충분히 크게 늘려야 한다.
+	- 
