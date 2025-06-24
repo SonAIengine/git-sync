@@ -43,22 +43,17 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 	예시 결과의 `hits.sort`가 `[350]`, `[200]` 등으로 나옴
         
 3. 두 번째 페이지 요청    
-`GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline {   "query": { /* 동일한 hybrid query */ },   "sort": [{ "doc_price": { "order": "desc" } }],   "search_after": [200],   "size": 2 }`
+	`GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline {   "query": { /* 동일한 hybrid query */ },   "sort": [{ "doc_price": { "order": "desc" } }],   "search_after": [200],   "size": 2 }`
     
-doc_price가 200 이하인 문서부터 다시 2건을 가져옴
+	doc_price가 200 이하인 문서부터 다시 2건을 가져옴
         
 
 ## 4. 예시 정리
 
-- **`doc_price` 기준 페이지네이션**
-    
-    json
-    
-    코드 복사
-    
+- doc_price 기준 페이지네이션
     `"sort": [{ "doc_price": { "order": "desc" } }], "search_after": [200]`
     
-    → `doc_price`가 200보다 작은 순서로 뒤쪽 결과 반환
+     `doc_price`가 200보다 작은 순서로 뒤쪽 결과 반환
     
 - **`_id` 기준 페이지네이션**
     
