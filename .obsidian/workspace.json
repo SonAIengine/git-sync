@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "검색엔진/Opensearch - ml - openai.md",
+                "file": "검색엔진/OpenSearch에 OpenAI API 임베딩 모델 등록 및 사용 가이드.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Opensearch - ml - openai"
+              "title": "OpenSearch에 OpenAI API 임베딩 모델 등록 및 사용 가이드"
             }
           }
         ]
@@ -168,7 +168,7 @@
   },
   "active": "91a98d2f871d49e4",
   "lastOpenFiles": [
-    "검색엔진/Opensearch - ml - openai.md",
+    "검색엔진/OpenSearch에 OpenAI API 임베딩 모델 등록 및 사용 가이드.md",
     "검색엔진/손성준 메모.md",
     "무제 1",
     "검색엔진",
