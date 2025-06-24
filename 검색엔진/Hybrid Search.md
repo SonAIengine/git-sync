@@ -9,3 +9,6 @@ Opensearch에서 하이브리드 검색을 사용하려면, 검색 파이프라�
 
 ### Paginating hybrid query results
 하이브리드 검색의 결과 페이지네이션
+1. pagination_depth 의 역할
+	- 각 샤드별로, 하이브리드 쿼리의 서브쿼리(벡터/불린 등)에서 최대 몇 개의 문서를 메모리에 유지할지 지정한다.
+	- 예를 들어 pagination_depth: 50 
