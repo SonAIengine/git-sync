@@ -4,21 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "cf0d99ad60dda4df",
+        "id": "4d5b1a26724c7d82",
         "type": "tabs",
         "children": [
           {
-            "id": "f6762c70ae3e2cfb",
+            "id": "91a98d2f871d49e4",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "검색엔진/Opensearch.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "Opensearch"
+              "title": "새 탭"
             }
           }
         ]
@@ -166,10 +162,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "f6762c70ae3e2cfb",
+  "active": "91a98d2f871d49e4",
   "lastOpenFiles": [
-    "검색엔진/손성준 메모.md",
     "검색엔진/Opensearch.md",
+    "검색엔진/손성준 메모.md",
     "무제 1",
     "검색엔진",
     "환영합니다!.md"
