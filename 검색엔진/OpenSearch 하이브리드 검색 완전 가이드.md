@@ -538,7 +538,7 @@ PUT /_search/pipeline/nlp-search-pipeline
 }
 ```
 
-### 3단계: 문서 삽입
+#### 3단계: 문서 삽입
 
 ```json
 POST /my-nlp-index/_bulk
@@ -548,7 +548,7 @@ POST /my-nlp-index/_bulk
 {"user":[{"name":"John Wick","age":46},{"name":"John Snow","age":40}],"location":[{"city":"Tromso","state":"Norway"},{"city":"Los Angeles","state":"California"}]}
 ```
 
-### 4단계: Inner Hits를 포함한 하이브리드 검색
+#### 4단계: Inner Hits를 포함한 하이브리드 검색
 
 ```json
 GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
@@ -577,9 +577,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-## 고급 기능
+### 고급 기능
 
-### Explain 파라미터 사용
+#### Explain 파라미터 사용
 
 점수 계산 과정을 자세히 분석하기 위해 `explain=true` 추가:
 
@@ -589,9 +589,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline&explain=true
 
 **주의사항**: explain은 리소스와 시간 면에서 비용이 많이 드는 작업이므로 프로덕션에서는 트러블슈팅 목적으로만 사용 권장
 
-### Inner Hits 정렬
+#### Inner Hits 정렬
 
-나이별 내림차순 정렬 예제:
+나이별 내림차순 정렬 예제
 
 ```json
 "inner_hits": {
@@ -605,9 +605,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline&explain=true
 
 **결과**: 커스텀 정렬 적용 시 `_score` 필드는 `null`이 됨 (점수 계산하지 않음)
 
-### Inner Hits 페이지네이션
+#### Inner Hits 페이지네이션
 
-세 번째와 네 번째 중첩 객체만 가져오기:
+세 번째와 네 번째 중첩 객체만 가져오기
 
 ```json
 "inner_hits": {
@@ -616,9 +616,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline&explain=true
 }
 ```
 
-### 커스텀 이름 정의
+#### 커스텀 이름 정의
 
-Inner hits 필드에 커스텀 이름 지정:
+Inner hits 필드에 커스텀 이름 지정
 
 ```json
 "inner_hits": {
@@ -626,9 +626,9 @@ Inner hits 필드에 커스텀 이름 지정:
 }
 ```
 
-## 응답 구조 분석
+### 응답 구조 분석
 
-### 기본 응답 형태
+#### 기본 응답 형태
 
 ```json
 {
@@ -668,27 +668,22 @@ Inner hits 필드에 커스텀 이름 지정:
 }
 ```
 
-## 활용 사례
+### 활용 사례
 
-### 장점
+#### 장점
 
 - 복합 검색에서 어떤 중첩 객체가 매칭되었는지 정확히 파악
 - 부모-자식 관계에서 세밀한 검색 결과 분석
 - 다중 필드 검색에서 각 필드별 기여도 확인
 
-### 실무 적용
+#### 실무 적용
 
 - 사용자 프로필과 위치 정보를 함께 검색하는 시스템
 - 제품 카탈로그에서 속성별 매칭 결과 분석
 - 문서 내 특정 섹션과 메타데이터 동시 검색
 
-## 성능 고려사항
+### 성능 고려사항
 
 - Inner hits는 추가적인 계산 비용 발생
 - 대용량 데이터에서는 페이지네이션 활용 권장
 - Explain 기능은 디버깅 목적으로만 제한적 사용
-
----
-
-**관련 문서**: [[OpenSearch Hybrid Search]], [[OpenSearch Nested Fields]], [[OpenSearch Aggregations]]  
-**태그**: #OpenSearch #HybridSearch #InnerHits #NestedFields #ElasticSearch
