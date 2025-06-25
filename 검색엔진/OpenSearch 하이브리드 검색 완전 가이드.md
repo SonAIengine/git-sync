@@ -459,10 +459,7 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 
 ## OpenSearch - Hybrid Query에서 Inner Hits 사용
 
-### 개요
-
-- **도입 버전**: OpenSearch 3.0
-- **목적**: 하이브리드 검색 시 매칭된 중첩 객체나 자식 문서를 검색하여 문서의 특정 부분이 쿼리와 어떻게 매칭되었는지 탐색
+ **목적**: 하이브리드 검색 시 매칭된 중첩 객체나 자식 문서를 검색하여 문서의 특정 부분이 쿼리와 어떻게 매칭되었는지 탐색
 
 ### 핵심 개념
 
