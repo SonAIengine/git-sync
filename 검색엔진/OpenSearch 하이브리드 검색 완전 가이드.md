@@ -214,7 +214,7 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 
 ## 성능 최적화 팁
 
-### 1. `pagination_depth` 최적화
+#### 1. `pagination_depth` 최적화
 
 ```json
 {
@@ -222,11 +222,11 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-### 2. `search_after` 사용 권장
+#### 2. `search_after` 사용 권장
 
 - 10페이지 이상의 깊은 페이지네이션에서는 `search_after` 사용
 
-### 3. 적절한 `k` 값 설정
+#### 3. 적절한 `k` 값 설정
 
 ```json
 {
@@ -238,7 +238,7 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-### 4. 필요한 필드만 반환
+#### 4. 필요한 필드만 반환
 
 ```json
 {
@@ -249,9 +249,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-## 실제 사용 예시
+### 실제 사용 예시
 
-### 전자상거래 상품 검색
+#### 전자상거래 상품 검색
 
 ```json
 GET /products/_search?search_pipeline=product-search-pipeline
@@ -289,7 +289,7 @@ GET /products/_search?search_pipeline=product-search-pipeline
 }
 ```
 
-### 뉴스/문서 검색
+#### 뉴스/문서 검색
 
 ```json
 GET /articles/_search?search_pipeline=news-search-pipeline
@@ -440,21 +440,19 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-## 결론
+### 결론
 
 후처리 필터링은 **표시 결과와 집계 결과를 분리**하여 관리할 수 있는 강력한 기능입니다. 특히 다음과 같은 상황에서 매우 유용합니다:
 
-### 적합한 사용 사례
+#### 적합한 사용 사례
 
 - **권한 기반 콘텐츠 필터링**
 - **개인화된 결과 표시**
 - **A/B 테스트 및 실험**
 - **전체 통계는 유지하되 표시만 제한**
 
-### 피해야 할 사용 사례
+#### 피해야 할 사용 사례
 
 - **단순한 범위 제한** (일반 필터가 더 효율적)
 - **성능이 중요한 대용량 검색**
 - **집계 결과도 필터링이 필요한 경우**
-
-올바르게 사용하면 사용자에게는 개인화된 결과를, 시스템에는 정확한 전체 통계를 제공하는 최적의 검색 경험을 만들 수 있습니다.
