@@ -1,6 +1,6 @@
 ## 개요
 
-**하이브리드 검색(Hybrid Search)**은 키워드 매칭(keyword search)과 의미 기반(semantic) 검색을 결합하여 검색 정확도를 높이는 기능입니다.
+하이브리드 검색(Hybrid Search)은 키워드 매칭(keyword search)과 의미 기반(semantic) 검색을 결합하여 검색 정확도를 높이는 기능입니다.
 
 OpenSearch에서 하이브리드 검색을 사용하려면:
 
@@ -329,16 +329,16 @@ GET /articles/_search?search_pipeline=news-search-pipeline
 }
 ```
 
-## 주의사항
+### 주의사항
 
 1. **일관된 파라미터 사용**: 같은 검색 세션에서는 동일한 `pagination_depth` 값 유지
 2. **메모리 관리**: `pagination_depth`와 `k` 값을 적절히 설정하여 메모리 사용량 최적화
 3. **정렬 기준 선택**: 하이브리드 검색에서는 `_score`를 첫 번째 정렬 기준으로 사용 권장
 4. **실시간성**: `search_after`는 실시간 데이터 변경에 민감하므로 주의 필요
 
-### OpenSearch 후처리 필터링(Post-filtering) 완전 가이드
+## OpenSearch 후처리 필터링(Post-filtering)
 
-**후처리 필터링(Post-filtering)**은 검색 결과가 모두 검색된 **후에** 추가적인 필터를 적용하는 기능입니다. 이는 일반적인 필터와는 완전히 다른 동작 방식을 가지며, 특별한 사용 사례에서 매우 유용합니다.
+후처리 필터링(Post-filtering)은 검색 결과가 모두 검색된 후에 추가적인 필터를 적용하는 기능입니다. 이는 일반적인 필터와는 완전히 다른 동작 방식을 가지며, 특별한 사용 사례에서 매우 유용합니다.
 #### 후처리 필터의 특징
 
 - **적용 시점**: 검색 결과가 완전히 계산된 **후에** 적용
