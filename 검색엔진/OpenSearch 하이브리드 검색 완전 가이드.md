@@ -1,4 +1,4 @@
-## 개요
+### 개요
 
 하이브리드 검색(Hybrid Search)은 키워드 매칭(keyword search)과 의미 기반(semantic) 검색을 결합하여 검색 정확도를 높이는 기능입니다.
 
@@ -8,9 +8,9 @@ OpenSearch에서 하이브리드 검색을 사용하려면:
 2. **검색 시점**에 파이프라인을 통해 얻은 결과 점수를 정규화 병합
 3. **최종 순위** 매기기
 
-## 사전 준비사항
+### 사전 준비사항
 
-### 필수 구성 요소
+#### 필수 구성 요소
 
 1. **텍스트 임베딩 모델** 준비
 2. **플러그인 활성화**
@@ -18,7 +18,7 @@ OpenSearch에서 하이브리드 검색을 사용하려면:
     - `text_embedding` 플러그인
     - `flow_framework` 플러그인
 
-### 기본 하이브리드 검색 설정
+#### 기본 하이브리드 검색 설정
 
 ```json
 GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
@@ -46,9 +46,9 @@ GET /my-nlp-index/_search?search_pipeline=nlp-search-pipeline
 }
 ```
 
-## 페이지네이션 (Pagination)
+### 페이지네이션 (Pagination)
 
-### 1. 기본 페이지네이션 (`from`/`size` 방식)
+#### 1. 기본 페이지네이션 (`from`/`size` 방식)
 
 #### `pagination_depth`의 역할
 
