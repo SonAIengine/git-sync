@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "검색엔진/랭킹, 사전 설정 바로 적용.md",
+                "file": "검색엔진/랭킹, 사전 설정 바로 적용 버튼 개발.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "랭킹, 사전 설정 바로 적용"
+              "title": "랭킹, 사전 설정 바로 적용 버튼 개발"
             }
           }
         ]
@@ -180,7 +180,7 @@
   "active": "98feb4dd01d3bee2",
   "lastOpenFiles": [
     "검색엔진/롯데카드/띵샵 검색 사전 데이터 이슈 건.md",
-    "검색엔진/랭킹, 사전 설정 바로 적용.md",
+    "검색엔진/랭킹, 사전 설정 바로 적용 버튼 개발.md",
     "검색엔진/연구노트/OpenSearch - Hybrid Query에서 Inner Hits 사용.md",
     "검색엔진/연구노트",
     "검색엔진/연구.md",
