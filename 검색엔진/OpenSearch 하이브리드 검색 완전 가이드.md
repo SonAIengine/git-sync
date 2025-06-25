@@ -502,7 +502,7 @@ GET /products/_search?search_pipeline=product-search-pipeline
 - **표시 결과**: 재고 있고, 20만원 이하, 활성 상품만
 - **집계 결과**: 모든 무선 이어폰의 브랜드/가격 분포 (사용자가 전체 현황 파악 가능)
 
-### 2. 뉴스/미디어 - 권한 기반 콘텐츠 필터링
+#### 2. 뉴스/미디어 - 권한 기반 콘텐츠 필터링
 
 ```json
 GET /articles/_search?search_pipeline=news-search-pipeline
@@ -568,7 +568,7 @@ GET /articles/_search?search_pipeline=news-search-pipeline
 }
 ```
 
-**이점:**
+**이점**
 
 - **관련도 점수**: 모든 AI 관련 기사로 정확한 점수 계산
 - **표시 결과**: 사용자 권한에 따른 접근 가능한 기사만
@@ -791,133 +791,3 @@ GET /recommendations/_search?search_pipeline=recommendation-pipeline
   }
 }
 ```
-
-## 주의사항 및 베스트 프랙티스
-
-### 1. 성능 고려사항
-
-**문제점:**
-
-- 전체 결과 집합을 메모리에 로드 후 필터링
-- 큰 결과 집합에서는 메모리 사용량 증가
-- 일반 필터보다 느린 성능
-
-**해결책:**
-
-```json
-{
-  "size": 20,  // 결과 크기 제한
-  "query": {
-    "bool": {
-      "must": [ /* 메인 쿼리 */ ],
-      "filter": [  // 기본적인 범위 제한은 일반 필터로
-        { "range": { "date": { "gte": "2024-01-01" } } }
-      ]
-    }
-  },
-  "post_filter": {  // 세밀한 개인화/권한만 후처리 필터로
-    "term": { "user_accessible": true }
-  }
-}
-```
-
-### 2. 점수 일관성 유지
-
-**문제점:**
-
-- 후처리 필터로 인한 점수 재정규화
-- 페이지네이션 시 점수 불일치 가능성
-
-**해결책:**
-
-```json
-{
-  "query": { /* 하이브리드 쿼리 */ },
-  "post_filter": { /* 후처리 필터 */ },
-  "sort": [
-    { "_score": { "order": "desc" } },
-    { "created_date": { "order": "desc" } },  // 점수 동일 시 보조 정렬
-    { "_id": { "order": "asc" } }  // 최종 정렬 보장
-  ]
-}
-```
-
-### 3. 집계 결과 활용
-
-**올바른 사용:**
-
-```json
-{
-  "post_filter": { "term": { "user_region": "KR" } },
-  "aggs": {
-    "global_trends": {
-      "terms": { "field": "category" }  // 전역 트렌드
-    },
-    "regional_trends": {
-      "filter": { "term": { "user_region": "KR" } },
-      "aggs": {
-        "local_categories": { "terms": { "field": "category" } }
-      }
-    }
-  }
-}
-```
-
-### 4. 사용자 경험 최적화
-
-**진보적 개선:**
-
-```json
-{
-  "query": {
-    "hybrid": {
-      "queries": [
-        { /* 기본 검색 */ },
-        { /* 의미 검색 */ }
-      ]
-    }
-  },
-  "post_filter": {
-    "bool": {
-      "should": [
-        {
-          "bool": {
-            "must": [  // 1순위: 정확히 맞는 조건
-              { "term": { "exact_match": true } }
-            ],
-            "boost": 3.0
-          }
-        },
-        {
-          "bool": {
-            "must": [  // 2순위: 부분 맞는 조건
-              { "term": { "partial_match": true } }
-            ],
-            "boost": 1.0
-          }
-        }
-      ],
-      "minimum_should_match": 1
-    }
-  }
-}
-```
-
-## 결론
-
-후처리 필터링은 **표시 결과와 집계 결과를 분리**하여 관리할 수 있는 강력한 기능입니다. 특히 다음과 같은 상황에서 매우 유용합니다:
-
-### 적합한 사용 사례
-
-- **권한 기반 콘텐츠 필터링**
-- **개인화된 결과 표시**
-- **A/B 테스트 및 실험**
-- **전체 통계는 유지하되 표시만 제한**
-
-### 피해야 할 사용 사례
-
-- **단순한 범위 제한** (일반 필터가 더 효율적)
-- **성능이 중요한 대용량 검색**
-- **집계 결과도 필터링이 필요한 경우**
-
-올바르게 사용하면 사용자에게는 개인화된 결과를, 시스템에는 정확한 전체 통계를 제공하는 최적의 검색 경험을 만들 수 있습니다.
