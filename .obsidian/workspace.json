@@ -25,14 +25,14 @@
             "id": "2d8250594a98ff23",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "split-diff-view",
               "state": {
-                "file": "검색엔진/롯데카드/사전 여부에 따른 쿼리 성능 테스트.md",
-                "mode": "preview",
-                "source": false
+                "aFile": ".obsidian/workspace.json",
+                "bFile": ".obsidian/workspace.json",
+                "aRef": ""
               },
-              "icon": "lucide-file",
-              "title": "사전 여부에 따른 쿼리 성능 테스트"
+              "icon": "diff",
+              "title": "Diff: workspace.json"
             }
           }
         ],
@@ -193,12 +193,12 @@
   },
   "active": "2d8250594a98ff23",
   "lastOpenFiles": [
-    "검색엔진/랭킹, 사전 설정 바로 적용 버튼 개발.md",
     "회의/교직원/전반적.md",
+    "검색엔진/롯데카드/사전 여부에 따른 쿼리 성능 테스트.md",
+    "검색엔진/랭킹, 사전 설정 바로 적용 버튼 개발.md",
     "회의/교직원/0623 - 검색서비스구현가능성 검증.md",
     "일정/0626.md",
     "검색엔진/롯데카드/띵샵 검색 사전 데이터 이슈 건.md",
-    "검색엔진/롯데카드/사전 여부에 따른 쿼리 성능 테스트.md",
     "일정",
     "회의/교직원/무제.md",
     "검색엔진/연구노트/OpenSearch - Hybrid Query에서 Inner Hits 사용.md",
