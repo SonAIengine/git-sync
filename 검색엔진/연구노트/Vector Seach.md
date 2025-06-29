@@ -8,5 +8,7 @@ Consumable
 3. Audio
 
 Machine Learning Model (embedding)
+- Sparse vector encodings (automatic metadata extranction)
 
-Dens
+Dense vector encodings
+
