@@ -9,7 +9,7 @@ Consumable
 
 Machine Learning Model (embedding)
 - Sparse vector encodings (automatic metadata extranction)
-
-Dense vector encodings
+- Dense vector encodings
 
 Neural Plugin - Opensearch AI/ML Connectors
+
