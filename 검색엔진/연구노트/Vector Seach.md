@@ -12,3 +12,4 @@ Machine Learning Model (embedding)
 
 Dense vector encodings
 
+Neural Plugin - Opensearch AI/ML Connectors
