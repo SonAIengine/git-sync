@@ -184,12 +184,11 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 314.5,
-    "collapsed": true
+    "width": 314.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -203,7 +202,7 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "98feb4dd01d3bee2",
+  "active": "4735b415ca90c474",
   "lastOpenFiles": [
     "회의/교직원/전반적.md",
     "검색엔진/연구노트/Vector Seach.md",
